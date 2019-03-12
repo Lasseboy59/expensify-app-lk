@@ -52,7 +52,7 @@ export { firebase, database as default };
 //     console.log(expenses);
 // });
 
-// ****************************//
+// *************** A good one *************//
 
 // database.ref('expenses')
 //   .once('value')

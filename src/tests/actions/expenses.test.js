@@ -3,8 +3,6 @@ import thunk from 'redux-thunk';
 import { startAddExpense, addExpense, editExpense, removeExpense, setExpenses, startSetExpenses } from '../../actions/expenses';
 import expenses from '../fixtures/expenses';
 import database from '../../firebase/firebase';
-import uuid from 'uuid';
-// import { strict } from 'assert';
 
 const createMockStore = configureMockStore([thunk]);
 
@@ -107,7 +105,7 @@ test('should setup set expense action object with data', () => {
   });
 });
 
-test('should fectc the expenses from the firebase', (done) => {
+test('should fetch the expenses from the firebase', (done) => {
   const store = createMockStore({});
   store.dispatch(startSetExpenses()).then(() => {
     const actions = store.getActions();
@@ -117,5 +115,4 @@ test('should fectc the expenses from the firebase', (done) => {
     });
     done();
   });
-
 });
